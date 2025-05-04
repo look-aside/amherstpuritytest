@@ -138,7 +138,7 @@
 
     <script src="script.js"></script>
 
-    <button type="button" id = "styleButton" onclick="countChecked()">Calculate My Score</button>
+    <button type="button" id = "resButton" onclick="countChecked()">Calculate My Score</button>
     <p id="result"></p>
 
     <script>
@@ -148,10 +148,13 @@
         checkboxes.forEach(cb => {
         if (cb.checked) count++;
         });
+        document.getElementById("checkboxes").remove();
+        
         document.getElementById("result").textContent = `Your score is ${100-count}.`;
+        
+        document.getElementById("resButton").remove();
     }
     </script>
-
 
 </body>
 </html>

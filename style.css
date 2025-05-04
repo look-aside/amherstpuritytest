@@ -6,17 +6,18 @@
 
 body{
     /* background-color: #FDEEC7; */
-    background-color: white;
+    background-color: #e1dbff;
 }
 
 #checkboxes{
     font-size: 20px;
 }
 
-#styleButton{
+#resButton{
     font-size: 30px;
 }
 
 #result{
     font-size: 40px;
+    text-align: center;
 }
