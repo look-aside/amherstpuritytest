@@ -1,0 +1,22 @@
+#header{
+    text-align: center;
+    font-size: 20px;
+    align-self: center;
+}
+
+body{
+    /* background-color: #FDEEC7; */
+    background-color: white;
+}
+
+#checkboxes{
+    font-size: 20px;
+}
+
+#styleButton{
+    font-size: 30px;
+}
+
+#result{
+    font-size: 40px;
+}
