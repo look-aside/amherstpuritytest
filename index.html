@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Amherst Purity Test</title>
+    <title>The Muck Purity Test</title>
     <link rel = "stylesheet" href = "style.css">
     <!-- 
     <link rel="shortcut icon" type="image/x-icon" href="tintprint_favicon.ico" />
@@ -14,16 +14,15 @@
 <body>
 
     <div id = "header">
-        <img src="banner.png" style = "width: 1000px">
+        <img src="banner-update.png" style = "width: 60%">
         <p>
         <i>
-            <br>The Muck Purity Test has historically served as a segue from orientation to true college life at Amherst. 
-        <br>
-        It's a voluntary opportunity for Mammoths to bond, and for students to track the maturation of their experiences throughout college.
+            <br>The Muck Purity Test has historically served as a segue from orientation to true college life at Amherst.<br> 
+        It's a voluntary opportunity for Mammoths to bond, and for students to track the maturation<br> of their experiences throughout college.
         </i><br><br>
         <b>Caution: This is not a bucket list. Completion of all items on this test will likely result in shame.</b>
         <br><br>
-        Click on every item you have done.    
+        <p id = "MPS">Click on every item you have done.  MPS stands for Mammoths Per Second.  </p>
     </p>
     </div>
 
@@ -138,8 +137,20 @@
 
     <script src="script.js"></script>
 
-    <button type="button" id = "resButton" onclick="countChecked()">Calculate My Score</button>
-    <p id="result"></p>
+    <button type="button" id = "resButton" onclick="countChecked()">Calculate My Score!</button>
+    
+    <div id = "resultDiv" style = "display: none">
+        <p id="result" ><b>Your score:</b></p>
+        <p id="resultNumber"></p>
+        
+        <button id = "reloadButton" onClick="window.location.reload();">Take again!</button>
+        &nbsp;&nbsp;&nbsp;
+        <button id = "reloadButton" onClick="resultShare()">Share</button>
+        <p id="shareText" style = "display: none; font-size: 20px;">Come on man just take a screenshot</p>
+
+        <p style = "font-size: 20px">Thank you for your submission!<br><br>
+            The Muck Purity test was created by the <a href="https://www.instagram.com/amherstmuckrake/">Muckrake Satire Newspaper</a> at Amherst College.<p>
+    </div>
 
     <script>
     function countChecked() {
@@ -150,9 +161,15 @@
         });
         document.getElementById("checkboxes").remove();
         
-        document.getElementById("result").textContent = `Your score is ${100-count}.`;
+        document.getElementById("resultDiv").style.display = "block";
+        document.getElementById("resultNumber").textContent = `${100-count} `;
         
         document.getElementById("resButton").remove();
+        document.getElementById("MPS").style.display = "none";
+    }
+
+    function resultShare(){
+        document.getElementById("shareText").style.display = "block";
     }
     </script>
 

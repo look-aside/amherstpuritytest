@@ -6,18 +6,49 @@
 
 body{
     /* background-color: #FDEEC7; */
-    background-color: #e1dbff;
+    background-image: url("rake-icon.png"); /* Replace with your image URL */
+    background-repeat: repeat; /* Or repeat-x, repeat-y, or no-repeat */
+    background-color: #dec3ff;  
+}
+
+#resultNumber{
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+    color: red;
+    padding: 0px;
 }
 
 #checkboxes{
     font-size: 20px;
 }
 
-#resButton{
-    font-size: 30px;
+button{
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 15px;
+
 }
 
+#resButton{
+   background-color: #D0F3CD; 
+}
+
+#resultDiv, #shareText{
+    text-align: center;
+    align-self: center;
+    padding: 0px;
+    margin: 0px;   
+}
+
+
+#reloadButton{
+    background-color: #FEA68B; 
+    align-self: center;
+    align-content: center;
+ }
+
 #result{
-    font-size: 40px;
+    font-size: 33px;
     text-align: center;
 }
